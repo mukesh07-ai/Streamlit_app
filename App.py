@@ -6,14 +6,14 @@ from PIL import Image
  
 st.set_page_config(page_title="Sales Dashboard", page_icon=":bar_chart:", layout="wide")
 
-@st.cache_data
+@st.cache
 def get_data(path:str) -> pd.DataFrame:
     data_frame = pd.read_csv(
         path,
     )
     return data_frame
 
-@st.cache_data
+@st.cache
 def get_image(path:str) -> Image:
     image = Image.open(path)
     return image
